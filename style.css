@@ -1,0 +1,159 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand > img {
+  width: 200px;
+}
+.nav-icon {
+  color: skyblue;
+  margin-right: 26px;
+}
+.container1 {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, white 80%, #87ceeb);
+  position: relative;
+  z-index: 1;
+}
+.seperate-container > h1 {
+  color: white;
+  font-size: 80px;
+  background-color: black;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seperate-container {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("images/holoid-3rd-gen.png");
+}
+.container2 {
+  z-index: 3;
+  margin-top: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* padding-top: 100px; */
+  position: relative;
+  background-image: linear-gradient(to top, white 80%, #87ceeb);
+  /* background-color: #335177; */
+}
+.artist-name {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 24px;
+  color: #f73447;
+  width: 80%;
+  animation: slide 1s;
+  animation-timeline: view();
+  animation-range: entry 0;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: 70%;
+  margin-left: 100px;
+}
+.information > div {
+  width: 230px;
+  margin-right: 200px;
+  margin-top: 80px;
+  font-size: 20px;
+  animation: slide 0.1s;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+h1 {
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+h2 {
+  color: #f73447;
+  font-weight: 900;
+}
+.emote {
+  font-size: xx-large;
+}
+.languages > h3 > span {
+  font-weight: 100;
+  font-size: small;
+}
+.languages > ul {
+  list-style: none;
+}
+.artist-avatar {
+  position: absolute;
+  width: 250px;
+  right: 250px;
+  top: 100px;
+  transition: 0.7s;
+}
+.artist-avatar:hover {
+  transform: scale(175%);
+}
+.character {
+  position: absolute;
+  left: 100px;
+}
+.character > img {
+  width: 1000px;
+  animation: kiri-kanan 2.5s cubic-bezier(0.5, 1, 0.5, 1) infinite;
+  transform-origin: left;
+}
+@keyframes slide {
+  from {
+    margin-left: -200px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@keyframes kiri-kanan {
+  0% {
+    transform: rotate(-3deg);
+    margin-top: 0px;
+  }
+  25% {
+    transform: rotate(7deg);
+    margin-top: 30px;
+  }
+  50% {
+    transform: rotate(-3deg);
+    margin-top: 30px;
+  }
+  70% {
+    transform: rotate(5deg);
+    margin-top: 30px;
+  }
+  100% {
+    transform: rotate(-3deg);
+    margin-top: 0px;
+  }
+}
